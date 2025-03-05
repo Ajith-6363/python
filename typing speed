@@ -1,0 +1,22 @@
+import time  
+import random  
+
+sentence_list = ["Hi this is Ajith, what's your name?",  
+                 "Hi this is Leena, how can I help you?"]  
+
+print("Write the sentence as it is below:")  
+sentence_to_type = random.choice(sentence_list)  
+print(sentence_to_type)  
+
+input("Press Enter when ready...")  
+start_time = time.time()  
+
+user_input = input("Start typing:\n")  
+
+end_time = time.time()  
+elapsed_time = end_time - start_time  
+
+word_count = len(sentence_to_type.split())  
+words_per_minute = (word_count / elapsed_time) * 60  
+
+print(f"\nTyping speed: {words_per_minute:.2f} WPM")
